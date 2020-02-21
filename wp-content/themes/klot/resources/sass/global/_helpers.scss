@@ -1,0 +1,165 @@
+.align {
+
+    &-left {
+    	text-align: left;
+    }
+
+    &-right {
+    	text-align: right;
+    }
+
+    &-center {
+    	text-align: center;
+    }
+
+    &-justify {
+    	text-align: justify;
+    }
+
+}
+
+.text {
+
+    &-uppercase {
+    	text-transform: uppercase;
+    }
+
+    &-lowercase {
+    	text-transform: lowercase;
+    }
+
+    &-capitalize {
+    	text-transform: capitalize;
+    }
+
+}
+
+.margin {
+
+    &-bottom {
+
+        &-5 {
+            margin-bottom: 5px;
+        }
+
+        &-10 {
+            margin-bottom: 10px;
+        }
+
+        &-15 {
+            margin-bottom: 15px;
+        }
+
+        &-20 {
+            margin-bottom: 20px;
+        }
+
+    }
+
+    &-left {
+
+        &-5 {
+            margin-left: 5px;
+        }
+
+        &-10 {
+            margin-left: 10px;
+        }
+
+        &-15 {
+            margin-left: 15px;
+        }
+
+        &-20 {
+            margin-left: 20px;
+        }
+
+    }
+
+    &-right {
+
+        &-5 {
+            margin-right: 5px;
+        }
+
+        &-10 {
+            margin-right: 10px;
+        }
+
+        &-15 {
+            margin-right: 15px;
+        }
+
+        &-20 {
+            margin-right: 20px;
+        }
+
+    }
+
+    &-top {
+
+        &-5 {
+            margin-top: 5px;
+        }
+
+        &-10 {
+            margin-top: 10px;
+        }
+
+        &-15 {
+            margin-top: 15px;
+        }
+
+        &-20 {
+            margin-top: 20px;
+        }
+
+    }
+
+}
+
+.responsive-img {
+    @include responsive-img();
+}
+
+.mobile {
+
+    &-hide {
+
+        @include breakpoint(sm) {
+            display: none !important;
+        }
+
+    }
+
+    &-show {
+
+        display: none;
+
+        @include breakpoint(sm) {
+            display: block;
+        }
+
+    }
+
+}
+
+.flex {
+
+	&-start {
+		@include flex(flex, row, wrap, flex-start, center);
+	}
+
+	&-space {
+		@include flex(flex, row, wrap, space-between, center);
+	}
+
+    &-around {
+		@include flex(flex, row, wrap, space-around, center);
+	}
+
+	&-end {
+		@include flex(flex, row, wrap, flex-end, center);
+	}
+
+}
