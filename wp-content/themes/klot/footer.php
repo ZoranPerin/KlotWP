@@ -1,13 +1,17 @@
-		    <!-- footer -->
-		    <footer class="footer">
+
+		    </main>
+		    <!-- /main -->
+
+			<!-- footer -->
+			<footer class="footer">
 
 			</footer>
 			<!-- /footer -->
-	      
-	    </main>
-	    <!-- /main -->
+
+		</div>
+		<!-- /page -->
 
 		<?php wp_footer(); ?>
-  
+
 	</body>
 </html>

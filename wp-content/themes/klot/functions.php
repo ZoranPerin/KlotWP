@@ -20,7 +20,7 @@ function wp_theme_nav()
 		'theme_location'  => 'header-menu',
 		'menu'            => '',
 		'container'       => 'div',
-		'container_class' => 'menu-{menu slug}-container',
+		'container_class' => 'menu-container',
 		'container_id'    => '',
 		'menu_class'      => 'menu',
 		'menu_id'         => '',
@@ -187,7 +187,7 @@ remove_action('wp_print_styles', 'print_emoji_styles');
 remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
 remove_action( 'admin_print_styles', 'print_emoji_styles' );
 
-// remove unnecessary cde
+// remove unnecessary code
 remove_action ('wp_head', 'rsd_link');
 remove_action( 'wp_head', 'wlwmanifest_link');
 remove_action( 'wp_head', 'wp_shortlink_wp_head');
@@ -208,6 +208,27 @@ function dequeue_jquery_migrate( &$scripts){
         $scripts->add( 'jquery', false, array( 'jquery-core' ), '1.10.2' );
     }
 }
+
+// remove comments from pages
+add_action('init', 'remove_comment_support', 100);
+
+function remove_comment_support() {
+remove_post_type_support( 'page', 'comments' );
+}
+
+// remove Comments from admin
+add_action( 'admin_init', 'my_remove_admin_menus' );
+function my_remove_admin_menus() {
+    remove_menu_page( 'edit-comments.php' );
+}
+
+// Remove unused CSS from WP
+function smartwp_remove_wp_block_library_css(){
+	wp_dequeue_style( 'wp-block-library' );
+	wp_dequeue_style( 'wp-block-library-theme' );
+	wp_dequeue_style( 'wc-block-style' );
+}
+add_action( 'wp_enqueue_scripts', 'smartwp_remove_wp_block_library_css', 100 );
 
 // CUSTOM POST TYPES //
 function create_post_type()

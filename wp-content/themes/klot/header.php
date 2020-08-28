@@ -16,11 +16,14 @@
 
     <body <?php body_class(); ?>>
 
-        <!-- header -->
-        <header class="header">
+		<!-- page -->
+		<div class="page-wrapper">
 
-        </header>
-        <!-- /header -->
+	        <!-- header -->
+	        <header class="header">
 
-        <!-- main -->
-        <main class="main">
+	        </header>
+	        <!-- /header -->
+
+	        <!-- main -->
+	        <main class="main">
