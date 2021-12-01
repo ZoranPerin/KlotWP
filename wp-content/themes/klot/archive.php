@@ -1,11 +1,13 @@
 <?php get_header(); ?>
 
-	<h1>
-		Archives
-	</h1>
-
-	<?php get_template_part('/template-parts/loop'); ?>
-
-<?php get_sidebar(); ?>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<h1>
+					Archives
+				</h1>
+			</div>
+		</div>
+	</div>
 
 <?php get_footer(); ?>
