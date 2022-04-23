@@ -149,6 +149,13 @@
     white-space: nowrap;
 }
 
+// @include theme(dark) {}
+@mixin theme($value) {
+	@media (prefers-color-scheme: $value) {
+		@content;
+	}
+}
+
 // @include vertical-align;
 @mixin vertical-align {
     position: relative;
