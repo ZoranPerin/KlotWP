@@ -17,9 +17,8 @@ include 'functions/remove_unnecessary_wp_code.php';
 include 'functions/remove_jquery_migrate.php';
 include 'functions/remove_comments_admin.php';
 include 'functions/remove_comments_pages.php';
-include 'functions/remove_unused_code.php';
 include 'functions/remove_update_notice.php';
-include 'functions/contact_form_7.php';
+// include 'functions/contact_form_7.php';
 include 'functions/compress_code.php';
 
 ?>

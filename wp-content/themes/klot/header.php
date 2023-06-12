@@ -17,7 +17,7 @@
     <body <?php body_class(); ?>>
 
 		<!-- page -->
-		<div class="page-wrapper">
+		<div class="page">
 
 	        <!-- header -->
 	        <header class="header">
